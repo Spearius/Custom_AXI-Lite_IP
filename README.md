@@ -100,7 +100,9 @@ The AXI4-Lite testbench also covers register accesses, reset behavior, FIFO stat
 
 ![Full FIFO AXI4-Lite Waveform](images/FULL_SC_FIFO_AXI_Waveform.png)
 
-This waveform shows the overall AXI4-Lite FIFO verification sequence.
+This waveform shows the overall AXI4-Lite FIFO verification sequence.  
+
+In the three waveform simulations above, the yellow signal is the clock cycles, the red signal is the reset signal, the aqua blue signals show how the data is written, the orange signals show how the data is read, and the green signals are the internal signals showing what is happening inside the FIFO.  
 
 ### FIFO Hardware Verification
 
