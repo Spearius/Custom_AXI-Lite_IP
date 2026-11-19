@@ -22,7 +22,7 @@ The project has two main parts:
 
 ## System Architecture Design & Simulation
 
-Below is the complete Vivado block diagram showing the Zynq Processing System connected to the custom multiplier, BRAM, and FIFO through AXI interfaces.
+Below is the complete Vivado block diagram showing the Zynq Processing System connected to the custom multiplier, BRAM, and FIFO through AXI interfaces. This was generated through Vivado.
 
 ![Complete Vivado Block Design](images/Complete_Block_Design.png)
 
@@ -44,19 +44,19 @@ A SystemVerilog testbench, `tb_multiplier_16_bit.sv`, was created to test the mu
 
 ![Multiplier Behavioral Simulation](images/Multiplier_Waveform.png)
 
-The waveform shows the multiplier calculating the expected products for the test inputs. The Vitis application then performed the 32 multiplication operations and read the results back from BRAM. The serial-terminal output confirmed the expected values, including `1 × 1 = 1` and `32 × 32 = 1024`. In this part, the ZYBO Z7 was connected to the laptop. Below are the outputs obtained from running the C application in Vitis:
+The waveform shows the multiplier calculating the expected products for the test inputs. The Vitis application then performed the 32 multiplication operations and read the results back from BRAM. The serial-terminal output confirmed the expected values, including `1 × 1 = 1` and `32 × 32 = 1024`. In this waveform, the yellow signal is the clock cycles, the red is the reset signal, the two green signals are the operands being multiplied together, and the aqua blue is the product.  
 
-![Multiplier and BRAM Output, Part 1](images/Multiplier_and_BRAM_Output_1.png)
+Since the hardware verification passed, the bitstream was generated into an .xsa file and used in Vitis for software integration. The code to test the software side is coded in C programming language and located in `vitis/multiplier/helloworld.c` of this project. Below are the outputs obtained from running the C application in Vitis:  
 
-![Multiplier and BRAM Output, Part 2](images/Multiplier_and_BRAM_Output_2.png)
+<p align="center">
+  <img src="images/Multiplier_and_BRAM_Output_1.png" width="48%" />
+  <img src="images/Multiplier_and_BRAM_Output_2.png" width="48%" />
+</p>  
+
 
 ## Custom AXI4-Lite FIFO
 
-In this part of the lab, the custom FIFO was integrated into an AXI4-Lite IP so the ARM processor could write data, request reads, and check FIFO status through memory-mapped registers.
-
-**FIFO** stands for **First-In, First-Out**. This means the first value written into the buffer is the first value returned when reading.
-
-The FIFO was configured as follows:
+In this part of the lab, the custom FIFO was integrated into an AXI4-Lite IP so the ARM processor could write data, request reads, and check FIFO status through memory-mapped registers. **FIFO** stands for **First-In, First-Out**. This means the first value written into the buffer is the first value returned when reading. The FIFO was configured with the following parameters:
 
 - **Data Width:** 16 bits
 - **Depth:** 32 entries
@@ -98,7 +98,7 @@ This waveform shows the overall AXI4-Lite FIFO verification sequence.
 
 ### FIFO Hardware Verification
 
-Lastly, we integrated the hardware with Vitis and used a C application to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. In this part, the ZYBO Z7 was connected to the laptop. Below is the output from the Vitis serial terminal:
+Lastly, the hardware was integrated again with Vitis and a C programming language code was used to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. The code used for this test is located at `vitis/fifo/helloworld.c` of this project. Below is the output from the Vitis serial terminal:
 
 ![FIFO Serial Terminal Output](images/FIFO_Serial_Terminal_Output.png)
 
