@@ -1,0 +1,29 @@
+# Vivado generated files
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
+
+# Vivado logs and journals
+*.jou
+*.log
+*.str
+*.backup.jou
+*.backup.log
+
+# Vitis generated files
+.metadata/
+RemoteSystemsTempFiles/
+Debug/
+Release/
+.settings/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+Thumbs.db
+desktop.ini
