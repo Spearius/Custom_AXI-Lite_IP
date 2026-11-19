@@ -74,9 +74,7 @@ The FIFO was configured as follows:
 
 ### FIFO Write and Read Simulation
 
-The AXI4-Lite FIFO testbench verifies write and read transactions, FIFO data count changes, and correct data ordering.
-
-Below is the behavioral simulation waveform:
+The AXI4-Lite FIFO testbench verifies write and read transactions, FIFO data count changes, and correct data ordering. Below is the behavioral simulation waveform:
 
 ![FIFO Read and Write Simulation](images/FIFO_Read_and_Write.png)
 
@@ -100,9 +98,7 @@ This waveform shows the overall AXI4-Lite FIFO verification sequence.
 
 ### FIFO Hardware Verification
 
-Lastly, we integrated the hardware with Vitis and used a C application to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. In this part, the ZYBO Z7 was connected to the laptop.  
-
-Below is the output from the Vitis serial terminal:
+Lastly, we integrated the hardware with Vitis and used a C application to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. In this part, the ZYBO Z7 was connected to the laptop. Below is the output from the Vitis serial terminal:
 
 ![FIFO Serial Terminal Output](images/FIFO_Serial_Terminal_Output.png)
 
@@ -110,8 +106,4 @@ The terminal output confirms the FIFO register values, successful data transfers
 
 ## Conclusion
 
-This lab demonstrated how custom FPGA hardware can communicate with an ARM processor through AXI4-Lite.
-
-The multiplier portion showed how software can send operands to hardware, retrieve a calculated result, and store it in BRAM. The FIFO portion showed how software can write and read buffered data while monitoring status and occupancy.
-
-The project provided hands-on experience with custom IP packaging, AXI4-Lite registers, testbench simulation using SystemVerilog HDL, BRAM implementation, FIFO design, and hardware/software integration using Vitis.
+This lab demonstrated how custom FPGA hardware can communicate with an ARM processor through AXI4-Lite. The multiplier portion showed how software can send operands to hardware, retrieve a calculated result, and store it in BRAM. The FIFO portion showed how software can write and read buffered data while monitoring status and occupancy. The project provided hands-on experience with custom IP packaging, AXI4-Lite registers, testbench simulation using SystemVerilog HDL, BRAM implementation, FIFO design, and hardware/software integration using Vitis.
