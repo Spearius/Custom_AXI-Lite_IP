@@ -40,17 +40,11 @@ In this part, a custom 16-bit multiplier was created and packaged as an AXI4-Lit
 
 ### Multiplier Simulation Waveform
 
-A SystemVerilog testbench, `tb_multiplier_16_bit.sv`, was created to test the multiplier with inputs from `1 × 1` through `32 × 32`.
-
-Below is the behavioral simulation waveform:
+A SystemVerilog testbench, `tb_multiplier_16_bit.sv`, was created to test the multiplier with inputs from `1 × 1` through `32 × 32`. Below is the behavioral simulation waveform:
 
 ![Multiplier Behavioral Simulation](images/Multiplier_Waveform.png)
 
-The waveform shows the multiplier calculating the expected products for the test inputs.
-
-The Vitis application then performed the 32 multiplication operations and read the results back from BRAM. The serial-terminal output confirmed the expected values, including `1 × 1 = 1` and `32 × 32 = 1024`.
-
-Below are the outputs obtained from running the C application in Vitis.
+The waveform shows the multiplier calculating the expected products for the test inputs. The Vitis application then performed the 32 multiplication operations and read the results back from BRAM. The serial-terminal output confirmed the expected values, including `1 × 1 = 1` and `32 × 32 = 1024`. In this part, the ZYBO Z7 was connected to the laptop. Below are the outputs obtained from running the C application in Vitis:
 
 ![Multiplier and BRAM Output, Part 1](images/Multiplier_and_BRAM_Output_1.png)
 
@@ -106,9 +100,7 @@ This waveform shows the overall AXI4-Lite FIFO verification sequence.
 
 ### FIFO Hardware Verification
 
-Lastly, we integrated the hardware with Vitis and used a C application to test FIFO register access and transfer three values through the custom hardware.
-
-The values were read back in the same order they were written.
+Lastly, we integrated the hardware with Vitis and used a C application to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. In this part, the ZYBO Z7 was connected to the laptop.  
 
 Below is the output from the Vitis serial terminal:
 
