@@ -48,10 +48,16 @@ The waveform shows the multiplier calculating the expected products for the test
 
 Since the hardware verification passed, the bitstream was generated into an .xsa file and used in Vitis for software integration. The code to test the software side is coded in C programming language and located in `vitis/multiplier/helloworld.c` of this project. Below are the outputs obtained from running the C application in Vitis:  
 
-<p align="center">
-  <img src="images/Multiplier_and_BRAM_Output_1.png" width="48%" />
-  <img src="images/Multiplier_and_BRAM_Output_2.png" width="48%" />
-</p>  
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="images/Multiplier_and_BRAM_Output_1.png" width="100%">
+    </td>
+    <td width="50%" valign="top">
+      <img src="images/Multiplier_and_BRAM_Output_2.png" width="100%">
+    </td>
+  </tr>
+</table>  
 
 
 ## Custom AXI4-Lite FIFO
