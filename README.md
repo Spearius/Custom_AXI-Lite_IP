@@ -106,9 +106,33 @@ In the three waveform simulations above, the yellow signal is the clock cycles, 
 
 ### FIFO Hardware Verification
 
-Lastly, the hardware was integrated again with Vitis and a C programming language code was used to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. The code used for this test is located at `vitis/fifo/helloworld.c` of this project. Below is the output from the Vitis serial terminal:
+Lastly, the hardware was integrated again with Vitis and a C programming language code was used to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. The code used for this test is located at `vitis/fifo/helloworld.c` of this project. Below is the output from the Vitis serial terminal:  
 
-![FIFO Serial Terminal Output](images/FIFO_Serial_Terminal_Output.png)
+<h2>FIFO Hardware Test Results</h2>
+
+<table>
+  <tr>
+    <th>Tests 1–5</th>
+    <th>Test 6</th>
+    <th>Tests 7–8</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="images/FIFO_Serial_Terminal_Output_Test1.png" width="350"><br>
+      <img src="images/FIFO_Serial_Terminal_Output_Test2.png" width="350"><br>
+      <img src="images/FIFO_Serial_Terminal_Output_Test3.png" width="350"><br>
+      <img src="images/FIFO_Serial_Terminal_Output_Test4.png" width="350"><br>
+      <img src="images/FIFO_Serial_Terminal_Output_Test5.png" width="350">
+    </td>
+    <td valign="top">
+      <img src="images/FIFO_Serial_Terminal_Output_Test6.png" width="350">
+    </td>
+    <td valign="top">
+      <img src="images/FIFO_Serial_Terminal_Output_Test7.png" width="350"><br>
+      <img src="images/FIFO_Serial_Terminal_Output_Test8.png" width="350">
+    </td>
+  </tr>
+</table>  
 
 The terminal output confirms the FIFO register values, successful data transfers, and an empty FIFO after all the values were retrieved.
 
