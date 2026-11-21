@@ -108,8 +108,6 @@ In the three waveform simulations above, the yellow signal is the clock cycles, 
 
 Lastly, the hardware was integrated again with Vitis and a C programming language code was used to test FIFO register access and transfer three values through the custom hardware. The values were read back in the same order they were written. The code used for this test is located at `vitis/fifo/helloworld.c` of this project. Below is the output from the Vitis serial terminal:  
 
-<h2>FIFO Hardware Test Results</h2>
-
 <table>
   <tr>
     <th>Tests 1–5</th>
