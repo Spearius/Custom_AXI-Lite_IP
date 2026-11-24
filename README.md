@@ -136,8 +136,6 @@ The terminal output confirms the FIFO register values, successful data transfers
 
 ### Utilization Report  
 
-On the left is the report showing all the resources used and on the right is a visual of the amount of resources used in the FPGA board.  
-
 <table>
   <tr>
     <th>Resource Utilization Report</th>
@@ -153,7 +151,7 @@ On the left is the report showing all the resources used and on the right is a v
   </tr>
 </table>  
 
-We can see this program utilizes a total of 931 slices, a total of 2,001 with only 124 used as memory, a total of 2,639 slice registers, 16.5 Block RAM blocks, and 1 DSP block.
+On the left is the report showing all the resources used and on the right is a visual of the amount of resources used in the FPGA board. We can see this program utilizes a total of 931 slices, a total of 2,001 with only 124 used as memory, a total of 2,639 slice registers, 16.5 Block RAM blocks, and 1 DSP block.
 
 ## Conclusion
 
