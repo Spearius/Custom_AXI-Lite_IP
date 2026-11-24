@@ -145,10 +145,10 @@ On the left is the report showing all the resources used and on the right is a v
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="images/Screenshot 2026-11-23 163551(1).png" width="100%">
+      <img src="images/Utilization_Report.png" width="100%">
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="images/Screenshot 2026-11-23 165645.png" width="100%">
+      <img src="images/Utilization_Report_Device_Visual.png" width="100%">
     </td>
   </tr>
 </table>  
